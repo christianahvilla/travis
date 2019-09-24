@@ -12,6 +12,8 @@ before_script:
 script:
   - npm test
   - npm run build
+  - npm install global serve
+  - serve -s build
 
 deploy:
   skip_cleanup: true
