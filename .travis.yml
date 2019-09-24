@@ -13,9 +13,9 @@ script:
   - npm test
   - npm run build
 
-  after_script:
-    - npm install -g modulus
-    - MODULUS_TOKEN=MODULUS_API_KEY modulus deploy -p MODULUS_PROJECT_NAME
+after_script:
+  - npm install -g modulus
+  - MODULUS_TOKEN=MODULUS_API_KEY modulus deploy -p MODULUS_PROJECT_NAME
 
 deploy:
   skip_cleaup: true
