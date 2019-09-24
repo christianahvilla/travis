@@ -1,27 +1,19 @@
 language: node_js
-
-node_js: "12.9.0"
-
+node_js: 12.9.0
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_script:
-  - npm install
-  - yarn install
-
+- npm install
 script:
-  - npm test a
-  - npm run build
-
-true:
-  branche: master
+- npm test
+- npm run build
 deploy:
-  skip_cleanup: true
   provider: heroku
   api_key:
-    secure: nrtX8Ee+zCNHihmG6RVzYMNFxxn5DW2FCLoVvYpCRFvnG2bNB19hEvUGaJjFhRNYaqEcYeF+zhcLCF4Gx7Wt2b2/V48DAQQNcpq44QXXyalfAjr2zejv32uOllRXTHjOEeeQp6WTv6HF6YiZXNXQg8rvwAqNV1qBPySAd9Y7SCE2/yO2yPLCzNZ+yFALEE7F7LaYtgKGf3z3g4kRORP+Vs7woigNAgVytp3QsnVK8p4OYRrrp3G17rzhY+Ds279sohnAQNpZPbPGbeKvEjjPdDvoRe0KiQLTquAj8Cos+8vhXUs4ZQeMWLhl5ouZMiWp3MxoNVesWqkaszue1HW8Iwo50q/8OM/1paMPUR4PTYZn6zFz2ztkBVaovnYerOSCfWtUczBsyjMhXcaYp3iR6uhMsuH5sNpQdzp1Zr+fEg1A4rYpQhgAQhjn2YtZGABy98MLWgAERXluCYF51hSCQzH6oCE0Nhbw9oJpWQfz5dwgACgRIGjmN+adwl/jM7AWWtj55hpkKbN5bZH0lJBVXKzyduvwyS47Ze8AvGFmNhfTbnsDEwpYI1y7fXLmIjC173UM7rHzw/GWsRdAlTX0lheRmhWaBLvK1vSiQrgSkW26MZHQoj03mwE//rWgvGKWWMkagA7eaSfcG+/iED214vS5lS6WLFICABZGkhzeWqM=
+    secure: CX2uGVyPdN3x4jrx3opFShrc13czWzXB93f4cOjEN+/QL4dQfvwa6a3BFCUlqu2/hcn8M+JxghHNAEMdEbOjReWgQ2DtH5hsrLiN+GEERFs8+EIDKTaHrZynKtYsl61gOWkVypdcOgA9O5c11UCZIp0bD0opGA9LUFL9Q/18yPTn7oagZKhaAxW8jCDw6NL5TsqqYQofixaNGbINikdwHkdsbKhkYFPNzUOXFCTzBiRFbmn6lwVv8nJ1RJjoEx4LJ+d3BSkp4u/s4kW4e+Brm6+EJdnY3KS4YpiiGaCApsR34ia5HlV8RNUxS5ohQqhtpndgeju7Db3pdX5RWSGUcOh82FFxPay6xsmciNTcQvbIqo0KAw4f4ESuF5OnZBWFzPvPfAo5xd2qvQPiFCtGpd4RvCgnNjcpH+6xEGPIWwuqaV+Nw4Ac3yg0CGrhEUy9GBbqJl3yLUCpLM5dK4cGLUZYHYmhHTq9AtVWYArJMps0ftMFkRc1DHDFBGe9cJkYeut1N1Nl9XWTgg/8TzpfAou7YdkyzOFsvQdBSFXk32FasibNvaJyQaMliXKopccFcZvk2q3ZurUO5V8HLpi20jO6i3y0P1rK1keAGVyscsnxugsIYdCcNNU6ADJE8rZXAlXV0peJWSh46iijVS1GG6UBx/zBk4ADcMS88kcklHY=
   app: travisreact
-
-on:
+  on:
+    branche: christianahvilla/travis
+true:
   branche: master
